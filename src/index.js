@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+import { store } from './_helpers';
+import { Provider } from 'react-redux';
 import App from './App';
+import ProductDetail from './_pages/productDetail'
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+
+          <Provider store={store}>
+              <Router>
+                  <Routes>
+                      <Route path="/"  element={<App/>} />
+                      <Route path="/product/:id"  element={<ProductDetail/>} />
+                  </Routes>
+              </Router>
+          </Provider>
+
+
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,41 @@
+.comp-section-01{
+  .c-wrapper{
+   margin: 0 auto;
+
+    .c-column-03{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+
+@media (min-width: 992px) {
+
+}
+
+
+@media (min-width: 1200px) {
+  .comp-section-01{
+    .c-wrapper{
+      width: 1200px;
+
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .comp-section-01{
+    .c-wrapper{
+      width: calc(100% - 40px);
+
+    }
+  }
+}
